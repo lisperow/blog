@@ -16,6 +16,7 @@
             <td>{{$article->id}}</td>
             <td>
               <a href="articles/{{$article->id}}">{{$article->name}}</a>
+              <a href="articles/{{$article->id}}/edit">Edit</a>
             </td>
           </tr>
         @endforeach

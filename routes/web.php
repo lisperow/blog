@@ -23,8 +23,14 @@ Route::get('/articles', 'ArticleController@index')
 Route::get('/articles/create', 'ArticleController@create')
     ->name('articles.create');
 
-Route::get('/articles/{id}', 'ArticleController@show')
-    ->name('articles.show');
-
 Route::post('/articles', 'ArticleController@store')
-  ->name('articles.store');
+    ->name('articles.store');
+
+Route::get('/articles/{id}', 'ArticleController@show')
+    ->name('article.show');
+
+Route::get('/articles/{id}/edit', 'ArticleController@edit')
+    ->name('articles.edit');
+
+Route::patch('/article/{id}', 'ArticleController@update')
+    ->name('articles.update');
